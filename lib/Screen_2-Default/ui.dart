@@ -1,4 +1,4 @@
-import 'package:bizeplatform/Screen_3-Default/Ui_Screen_3.dart';
+import 'package:bizeplatform/Screen_3-Default/ui_Screen_3.dart';
 import 'package:flutter/material.dart';
 
 class defaultPage extends StatelessWidget{

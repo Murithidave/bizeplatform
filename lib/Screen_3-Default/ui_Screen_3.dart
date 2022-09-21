@@ -1,4 +1,4 @@
-import 'package:bizeplatform/Screen_4-Default/UI_screen_4.dart';
+import 'package:bizeplatform/Screen_4-Default/ui_screen_4.dart';
 import 'package:flutter/material.dart';
 
 class Screen3 extends StatefulWidget {
@@ -26,20 +26,15 @@ class _Screen3State extends State<Screen3> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/15.0),
                  ),
-                 Container(
+                 ClipOval(
+                   child:Container(
                    height: (MediaQuery.of(context).size.height/18),
                    width: (MediaQuery.of(context).size.width/3.0),
-                   decoration: BoxDecoration(
-                     color: Colors.blue,
-                       border: Border.all(
-                         color: Colors.black,
-                       ),
-                     borderRadius:const BorderRadius.all(Radius.elliptical(90,45)),
-                   ),
-                   alignment: Alignment.center,
+                   color: Colors.blue,
                    child: IconButton(
                      icon:const Icon(Icons.back_hand),
                      onPressed: () { },
+                   ),
                    ),
                  ),
                  SizedBox(
@@ -54,23 +49,18 @@ class _Screen3State extends State<Screen3> {
                    child: Container(
                      height: (MediaQuery.of(context).size.height/16),
                      width: (MediaQuery.of(context).size.width/2.5),
-                     decoration: BoxDecoration(
-                       border: Border.all(
-                         color: Colors.black,
-                       ),
-                         borderRadius: const BorderRadius.all(Radius.circular(12)),
-                     ),
+                     decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(12)),),
                      child:  ElevatedButton(
-                       child:  const Text("BUYER MODE",
-                         style: TextStyle(fontSize: 20.0, color: Colors.white,),),
+                       style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),),
                        onPressed: (){},
+                       child:  const Text("BUYER MODE",style: TextStyle(fontSize: 20.0, color: Colors.white,),),
                      ),
                    ),
                  ),
                ],
              ),
              SizedBox(
-               height: (MediaQuery.of(context).size.height/80),
+               height: (MediaQuery.of(context).size.height/70),
                //width: (MediaQuery.of(context).size.height/40.0),
              ),
              Row(
@@ -79,22 +69,17 @@ class _Screen3State extends State<Screen3> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/8.5),
                  ),
-                 Container(
-                   height: (MediaQuery.of(context).size.height/22),
-                   width: (MediaQuery.of(context).size.width/4.5),
-                   decoration: BoxDecoration(
+                 ClipOval(
+                   child: Container(
+                     height: (MediaQuery.of(context).size.height/22),
+                     width: (MediaQuery.of(context).size.width/4.5),
                      color: Colors.blue,
-                     border: Border.all(
-                       color: Colors.black,
-                     ),
-                     borderRadius:const BorderRadius.all(Radius.elliptical(90,45)),
                    ),
-
                  ),
                ],
              ),
              SizedBox(
-               height: (MediaQuery.of(context).size.height/60),
+               height: (MediaQuery.of(context).size.height/30),
                //width: (MediaQuery.of(context).size.height/40.0),
              ),
              Row(
@@ -104,14 +89,11 @@ class _Screen3State extends State<Screen3> {
                    width: (MediaQuery.of(context).size.width/15.0),
                  ),
                  Container(
-                   height: (MediaQuery.of(context).size.height/2.5),
-                   width: (MediaQuery.of(context).size.width/1.5),
-                   decoration: BoxDecoration(
+                   height: (MediaQuery.of(context).size.height/2.2),
+                   width: (MediaQuery.of(context).size.width/1.3),
+                   decoration: const BoxDecoration(
                      color: Colors.blueGrey,
-                     border: Border.all(
-                       color: Colors.black,
-                     ),
-                     borderRadius: const BorderRadius.all(Radius.circular(20)),
+                     borderRadius: BorderRadius.all(Radius.circular(20)),
                    ),
                    child: Column(
                      children: [
@@ -119,17 +101,11 @@ class _Screen3State extends State<Screen3> {
                          height: (MediaQuery.of(context).size.height/20),
                          //width: (MediaQuery.of(context).size.height/40.0),
                        ),
-                       Container(
+                       SizedBox(
                          height: (MediaQuery.of(context).size.height/20),
                          width: (MediaQuery.of(context).size.width/1.7),
-                         decoration: BoxDecoration(
-                           border: Border.all(
-                             color: Colors.black,
-                           ),
-                           borderRadius: const BorderRadius.all(Radius.circular(10)),
-                         ),
                          child:  ElevatedButton(
-                           onPressed: (){},
+                           onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen4()));},
                            style: ElevatedButton.styleFrom(
                              backgroundColor: Colors.lightGreen,
                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
@@ -138,18 +114,12 @@ class _Screen3State extends State<Screen3> {
                          ),
                        ),
                        SizedBox(
-                         height: (MediaQuery.of(context).size.height/30),
+                         height: (MediaQuery.of(context).size.height/20),
                          //width: (MediaQuery.of(context).size.height/40.0),
                        ),
-                       Container(
+                       SizedBox(
                          height: (MediaQuery.of(context).size.height/20),
                          width: (MediaQuery.of(context).size.width/1.7),
-                         decoration: BoxDecoration(
-                           border: Border.all(
-                             color: Colors.black,
-                           ),
-                           borderRadius: const BorderRadius.all(Radius.circular(10)),
-                         ),
                          child:  ElevatedButton(
                            onPressed: (){},
                            style: ElevatedButton.styleFrom(
@@ -161,18 +131,12 @@ class _Screen3State extends State<Screen3> {
                          ),
                        ),
                        SizedBox(
-                         height: (MediaQuery.of(context).size.height/30),
+                         height: (MediaQuery.of(context).size.height/20),
                          //width: (MediaQuery.of(context).size.height/40.0),
                        ),
-                       Container(
+                       SizedBox(
                          height: (MediaQuery.of(context).size.height/20),
                          width: (MediaQuery.of(context).size.width/1.7),
-                         decoration: BoxDecoration(
-                           border: Border.all(
-                             color: Colors.black,
-                           ),
-                           borderRadius: const BorderRadius.all(Radius.circular(10)),
-                         ),
                          child:  ElevatedButton(
                            onPressed: (){},
                            style: ElevatedButton.styleFrom(
@@ -184,20 +148,14 @@ class _Screen3State extends State<Screen3> {
                          ),
                        ),
                        SizedBox(
-                         height: (MediaQuery.of(context).size.height/30),
+                         height: (MediaQuery.of(context).size.height/20),
                          //width: (MediaQuery.of(context).size.height/40.0),
                        ),
-                       Container(
+                       SizedBox(
                          height: (MediaQuery.of(context).size.height/20),
                          width: (MediaQuery.of(context).size.width/1.7),
-                         decoration: BoxDecoration(
-                           border: Border.all(
-                             color: Colors.black,
-                           ),
-                           borderRadius: const BorderRadius.all(Radius.circular(10)),
-                         ),
                          child:  ElevatedButton(
-                           onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Screen4()));},
+                           onPressed: (){},
                            style: ElevatedButton.styleFrom(
                              backgroundColor: Colors.lightGreen,
                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),

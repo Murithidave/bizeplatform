@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screen_2-Default/UI.dart';
+import 'Screen_2-Default/ui.dart';
 
 
 //Well have the screens transitions operated from here..
