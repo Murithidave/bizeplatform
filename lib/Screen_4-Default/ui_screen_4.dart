@@ -1,3 +1,6 @@
+// ignore_for_file: library_private_types_in_public_api
+
+import 'package:bizeplatform/Screen_5-Default/ui_screen_5.dart';
 import 'package:flutter/material.dart';
 
 class Screen4 extends StatefulWidget {
@@ -73,7 +76,7 @@ class _Screen4State extends State<Screen4> {
                      height: (MediaQuery.of(context).size.height/12),
                      width: (MediaQuery.of(context).size.width/1.3),
                      child:  ElevatedButton(
-                       onPressed: (){},
+                       onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen5()));},
                        child:Text("PERSONAL DETAILS",
                          style: TextStyle(fontSize: textScaleHere*buttonDivisionFactor , color: Colors.white,),),
                      ),
