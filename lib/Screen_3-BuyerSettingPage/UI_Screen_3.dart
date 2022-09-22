@@ -2,15 +2,15 @@
 //It dr0ps down the 'buyer settings', switch to merchant mode, merchant settings and ap settings
 
 import 'package:flutter/material.dart';
-class BuyerModeScreen3 extends StatefulWidget {
+class Screen3 extends StatefulWidget {
 
-  const BuyerModeScreen3({Key? key}) : super(key: key);
+  const Screen3({Key? key}) : super(key: key);
 
   @override
-  _BuyerModeScreen3State createState() => _BuyerModeScreen3State();
+  _Screen3State createState() => _Screen3State();
 }
 
-class _BuyerModeScreen3State extends State<BuyerModeScreen3> {
+class _Screen3State extends State<Screen3> {
   @override
   Widget build(BuildContext context) {
     //double textScale = MediaQuery.textScaleFactorOf(context);
