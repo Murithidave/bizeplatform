@@ -20,17 +20,17 @@ class _Screen8State extends State<Screen8> {
   Widget build(BuildContext context) {
     double textScaleScreen8 = MediaQuery.textScaleFactorOf(context);
     double buttonDivisionFactor = 23;
-    num screen8FontFactor = 26;
+    num screen8FontFactor = 23;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("CODE VERIFICATION",style: TextStyle(fontSize: textScaleScreen8*screen8FontFactor,),),
+      ),
       body: SizedBox(
           height: double.infinity,
           width: double.infinity,
           child: Column(
               children: [
-                SizedBox(
-                  height: (MediaQuery.of(context).size.height/14),
-                  width: double.infinity,
-                ),
+                //SizedBox(height: (MediaQuery.of(context).size.height/14), width: double.infinity,),
                 SizedBox(
                   height: (MediaQuery.of(context).size.height/24),
                   width: double.infinity,
@@ -41,7 +41,7 @@ class _Screen8State extends State<Screen8> {
                 SizedBox(
                   height: (MediaQuery.of(context).size.height/24),
                   width: double.infinity,
-                  child: Text("   please enter the code below",
+                  child: Text("   please enter the received code below",
                     //textAlign: TextAlign.left,
                     style: TextStyle(fontSize: textScaleScreen8*screen8FontFactor,),),
                 ),

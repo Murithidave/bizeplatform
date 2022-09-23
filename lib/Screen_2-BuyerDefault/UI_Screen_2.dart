@@ -59,7 +59,8 @@ class Screen2 extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                       ),
-                      child: InkWell(onTap: () {  Navigator.pushNamed(context, '/Screen3'); },   splashColor: Colors.yellow, child: Image.network("https://picsum.photos/250?image=9",
+                      child: InkWell(onTap: () {Navigator.push(context,MaterialPageRoute(builder: (context) => const Screen3()));},
+                        splashColor: Colors.yellow, child: Image.network("https://picsum.photos/250?image=9",
                           fit: BoxFit.cover), ),
                     ),
                     Column(
@@ -74,9 +75,7 @@ class Screen2 extends StatelessWidget {
                           child: Text(' Merchant Mode'),
                         ),
                         ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/Screen2');
-                          },
+                          onPressed: () {},
                           child: Text(' Buyer Mode'),
                         ),
                       ],

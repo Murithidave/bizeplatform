@@ -14,218 +14,424 @@ class Screen7 extends StatefulWidget {
 class _Screen7State extends State<Screen7> {
   @override
   Widget build(BuildContext context) {
-    double textScaleScreen7 = MediaQuery.textScaleFactorOf(context);
-    double buttonDivisionFactor = 23;
-    num screen7FontFactor = 26;
+    double textScaleScreen5 = MediaQuery.textScaleFactorOf(context);
     return Scaffold(
-      body: SizedBox(
-          height: double.infinity,
-          width: double.infinity,
+      // backgroundColor: Color(0xffffffff),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("Payment Gateways", style: TextStyle(fontWeight: FontWeight.w700, fontStyle: FontStyle.normal,fontSize: 16, color: Colors.white,),),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.zero,
+        padding: EdgeInsets.zero,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          color: const Color(0x1f000000),
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.zero,
+          border: Border.all(color: const Color(0x4d9e9e9e), width: 1),
+        ),
+        child: SingleChildScrollView(
           child: Column(
-              children: [
-                SizedBox(
-                  height: (MediaQuery.of(context).size.height/14),
-                  width: double.infinity,
-                ),
-                SizedBox(
-                  height: (MediaQuery.of(context).size.height/24),
-                  width: double.infinity,
-                  child:Text("    Select your preferred mode of payment",
-                    //textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor,),),
-                ),
-                SizedBox(
-                  height: (MediaQuery.of(context).size.height/24),
-                  width: double.infinity,
-                  child: Text("   this can later be changed",
-                    //textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor,),),
-                ),
-                SizedBox(
-                  height: (MediaQuery.of(context).size.height/35),
-                ),
-                Row(
-                  children: [
-                    SizedBox(
-                      //height: (MediaQuery.of(context).size.height/3.3),
-                      width: (MediaQuery.of(context).size.width/20.0),
-                    ),
-                    ClipOval(
-                      child: SizedBox(
-                        height: (MediaQuery.of(context).size.height/12),
-                        width: (MediaQuery.of(context).size.width/1.3),
-                        child:  ElevatedButton(
-                          onPressed: (){},
-                          child:Text("PAYMENT GATEWAYS",
-                            style: TextStyle(fontSize: textScaleScreen7*buttonDivisionFactor , color: Colors.white,),),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      //height: (MediaQuery.of(context).size.height/3.3),
-                      width: (MediaQuery.of(context).size.width/30),
-                    ),
-                    ClipOval(
-                      child: Container(
-                        height: (MediaQuery.of(context).size.height/28),
-                        width: (MediaQuery.of(context).size.width/12),
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ],
-                ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.all(5),
-                      child:Column(
-                        children: [
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('M-PESA                                                               ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('AIRTEL MONEY                                                               ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('MASTERCARD                                                               ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('VISA                                                                  ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('CASH                                                               ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('  CHEQUES                                                                 ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/18),
-                            width: (MediaQuery.of(context).size.width/1.1),
-                            //color: Colors.blue,
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),
-                                  backgroundColor:Colors.transparent,shadowColor: Colors.transparent),
-                              onPressed: (){},
-                              child: Text('  BANK TO BANK DEPOSITS                                                                 ',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black, ),),
-                            ),
-                          ),
-                          SizedBox(
-                            height: (MediaQuery.of(context).size.height/30),
-                            width: double.infinity,
-                          ),
-                          SizedBox(
-                            //height: (MediaQuery.of(context).size.height/12),
-                            width: (MediaQuery.of(context).size.width/1.4),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),),
-                              onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen8()));},
-                              child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen7*screen7FontFactor , color: Colors.black,),),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Mpesa",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+
                   ),
+                  textAlign: TextAlign.start,
                 ),
-              ]
-          )
+                subtitle: const Text(
+                  "Mpesa Direct Transfer",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Mpesa",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Mpesa Till",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Mpesa",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Mpesa PayBill",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Airtel",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Airtel Direct Transfer",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Airtel",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Airtel Till",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "PayPal",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "PayPall For Business",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Bank",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Bank Deposit",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 12,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              SwitchListTile(
+                value: true,
+                title: const Text(
+                  "Cash",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                subtitle: const Text(
+                  "Cash Payment",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Color(0xff000000),
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                  side: BorderSide(color: Color(0x4d9e9e9e), width: 1),
+                ),
+                onChanged: (value) {},
+                tileColor: Colors.white70,
+                activeColor: const Color(0xff3a57e8),
+                activeTrackColor: const Color(0xff92c6ef),
+                controlAffinity: ListTileControlAffinity.platform,
+                dense: false,
+                inactiveThumbColor: const Color(0xff9e9e9e),
+                inactiveTrackColor: const Color(0xffe0e0e0),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                secondary: const Icon(Icons.workspaces_filled,
+                    color: Color(0xff212435), size: 24),
+                selected: false,
+                selectedTileColor: const Color(0x42000000),
+              ),
+              const Divider(
+                color: Color(0xff808080),
+                height: 16,
+                thickness: 0,
+                indent: 0,
+                endIndent: 0,
+              ),
+              Container(
+                height: (MediaQuery.of(context).size.height/18),
+                width: (MediaQuery.of(context).size.width/1.3),
+                decoration: const BoxDecoration(
+                  //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
+                  boxShadow:[BoxShadow(color: Colors.blue, offset:Offset(1.5, 1.5),blurRadius: 20),],
+                  color: Colors.blue,
+                ),
+                child: ElevatedButton(
+                  onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Screen8()));},
+                  child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen5*26, color: Colors.white,),),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

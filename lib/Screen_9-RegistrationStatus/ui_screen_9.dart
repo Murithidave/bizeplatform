@@ -15,7 +15,7 @@ class _Screen9State extends State<Screen9> {
   @override
   Widget build(BuildContext context) {
     double textScaleScreen9 = MediaQuery.textScaleFactorOf(context);
-    double buttonDivisionFactor = 23;
+    //double buttonDivisionFactor = 23;
     num screen9FontFactor = 26;
     return Scaffold(
       body: SizedBox(

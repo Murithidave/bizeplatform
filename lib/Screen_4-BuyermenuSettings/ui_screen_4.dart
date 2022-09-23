@@ -1,7 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:flutter/material.dart';
 import '../Screen_5-BuyerDetails/ui_screen_5.dart';
-import '../Screen_6-BuyerPrefernces/ui_screen_6.dart';
+import '../Screen_6-BuyerPreferences/ui_screen_6.dart';
 import '../Screen_7-BuyerPaymentGateways/ui_screen_7.dart';
 
 
@@ -18,51 +18,20 @@ class _Screen4State extends State<Screen4> {
   Widget build(BuildContext context) {
     double textScaleHere = MediaQuery.textScaleFactorOf(context);
     double buttonDivisionFactor = 23;
+    bool? checkVal = false;
+    //double iconSizeH = 100;
+    //num screen5FontFactor = 23;
+    num thisSpacing = 18;
+    num thisHeight = 13;
    return Scaffold(
+     appBar: AppBar(
+       title: Text("BUYER SETTINGS",style: TextStyle(fontSize: textScaleHere*24 , color: Colors.white,),),
+     ),
        body:SizedBox(
          height: double.infinity,
          width: double.infinity,
          child: Column(
            children: [
-             Row(
-               children: [
-                 SizedBox(
-                   //height: (MediaQuery.of(context).size.height/3.3),
-                   width: (MediaQuery.of(context).size.width/15.0),
-                 ),
-                 ClipOval(
-                   child:Container(
-                     height: (MediaQuery.of(context).size.height/18),
-                     width: (MediaQuery.of(context).size.width/3.0),
-                     color: Colors.blue,
-                     child: IconButton(
-                       icon:const Icon(Icons.back_hand),
-                       onPressed: () { },
-                     ),
-                   ),
-                 ),
-                 SizedBox(
-                   //height: (MediaQuery.of(context).size.height/3.3),
-                   width: (MediaQuery.of(context).size.width/10),
-                 ),
-                 Container(
-                   height: (MediaQuery.of(context).size.height/7.4),
-                   width: (MediaQuery.of(context).size.width/2.0),
-                   //color: Colors.greenAccent,
-                   alignment: Alignment.centerLeft,
-                   child: Container(
-                     height: (MediaQuery.of(context).size.height/16),
-                     width: (MediaQuery.of(context).size.width/2.5),
-                     decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(12)),),
-                     child:  ElevatedButton(
-                       style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),),
-                       onPressed: (){},
-                       child: Text("BUYER",style: TextStyle(fontSize: textScaleHere*28 , color: Colors.white,),),
-                     ),
-                   ),
-                 ),
-               ],
-             ),
              SizedBox(
                height: (MediaQuery.of(context).size.height/8),
                //width: (MediaQuery.of(context).size.height/40.0),
@@ -73,14 +42,30 @@ class _Screen4State extends State<Screen4> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/20.0),
                  ),
-                 ClipOval(
-                   child: SizedBox(
-                     height: (MediaQuery.of(context).size.height/12),
-                     width: (MediaQuery.of(context).size.width/1.3),
-                     child:  ElevatedButton(
-                       onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen5()));},
-                       child:Text("PERSONAL DETAILS",
-                         style: TextStyle(fontSize: textScaleHere*buttonDivisionFactor , color: Colors.white,),),
+                 Container(
+                   height: (MediaQuery.of(context).size.height/thisHeight),
+                   width: (MediaQuery.of(context).size.width/1.4),
+                   decoration: const BoxDecoration(
+                     borderRadius: BorderRadius.all(Radius.elliptical(270,60)),
+                     boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 30),],
+                     color: Colors.white,
+                   ),
+                   child:ClipOval(
+                     child: Material(
+                       color: Colors.transparent,
+                       child: InkWell(
+                         onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen5()));},
+                         splashColor: Colors.blueAccent,
+                         child: Row(
+                           children: [
+                             SizedBox(width: (MediaQuery.of(context).size.width/30),),
+                             const Icon(Icons.person_add,size: 35,color: Colors.black,),
+                             Text('    PERSONAL DETAILS', style: TextStyle(fontWeight: FontWeight.w600,fontSize: textScaleHere*buttonDivisionFactor, color: Colors.black,),),
+                             //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
+                             //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
+                           ],
+                         ),
+                       ),
                      ),
                    ),
                  ),
@@ -88,33 +73,50 @@ class _Screen4State extends State<Screen4> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/30),
                  ),
-                 ClipOval(
-                   child: Container(
-                     height: (MediaQuery.of(context).size.height/28),
-                     width: (MediaQuery.of(context).size.width/12),
-                     color: Colors.blue,
-                   ),
+                 Checkbox(
+                   value: checkVal,
+                   checkColor: Colors.deepOrange,
+                   onChanged: (bool? value) {
+                     if (checkVal == false) {}
+                     setState((){
+                       checkVal = value!;
+                       if (checkVal == true){}
+                     });
+                   },
                  ),
                ],
              ),
-             SizedBox(
-               height: (MediaQuery.of(context).size.height/10),
-               //width: (MediaQuery.of(context).size.height/40.0),
-             ),
+             SizedBox(height: (MediaQuery.of(context).size.height/thisSpacing),),
              Row(
                children: [
                  SizedBox(
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/20.0),
                  ),
-                 ClipOval(
-                   child: SizedBox(
-                     height: (MediaQuery.of(context).size.height/12),
-                     width: (MediaQuery.of(context).size.width/1.3),
-                     child:  ElevatedButton(
-                       onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen6()));},
-                       child:  Text("PREFERENCES",
-                         style: TextStyle(fontSize: textScaleHere*buttonDivisionFactor, color: Colors.white,),),
+                 Container(
+                   height: (MediaQuery.of(context).size.height/thisHeight),
+                   width: (MediaQuery.of(context).size.width/1.4),
+                   decoration: const BoxDecoration(
+                     borderRadius: BorderRadius.all(Radius.elliptical(270,60)),
+                     boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 30),],
+                     color: Colors.white,
+                   ),
+                   child:ClipOval(
+                     child: Material(
+                       color: Colors.transparent,
+                       child: InkWell(
+                         onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen6()));},
+                         splashColor: Colors.blueAccent,
+                         child: Row(
+                           children: [
+                             SizedBox(width: (MediaQuery.of(context).size.width/30),),
+                             const Icon(Icons.room_preferences_outlined,size: 35,color: Colors.black,),
+                             Text('    PREFERENCES', style: TextStyle(fontWeight: FontWeight.w600,fontSize: textScaleHere*buttonDivisionFactor, color: Colors.black,),),
+                             //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
+                             //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
+                           ],
+                         ),
+                       ),
                      ),
                    ),
                  ),
@@ -122,33 +124,50 @@ class _Screen4State extends State<Screen4> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/30),
                  ),
-                 ClipOval(
-                   child: Container(
-                     height: (MediaQuery.of(context).size.height/28),
-                     width: (MediaQuery.of(context).size.width/12),
-                     color: Colors.blue,
-                   ),
+                 Checkbox(
+                   value: checkVal,
+                   checkColor: Colors.deepOrange,
+                   onChanged: (bool? value) {
+                     if (checkVal == false) {}
+                     setState((){
+                       checkVal = value!;
+                       if (checkVal == true){}
+                     });
+                   },
                  ),
                ],
              ),
-             SizedBox(
-               height: (MediaQuery.of(context).size.height/10),
-               //width: (MediaQuery.of(context).size.height/40.0),
-             ),
+             SizedBox(height: (MediaQuery.of(context).size.height/thisSpacing),),
              Row(
                children: [
                  SizedBox(
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/20.0),
                  ),
-                 ClipOval(
-                   child: SizedBox(
-                     height: (MediaQuery.of(context).size.height/12),
-                     width: (MediaQuery.of(context).size.width/1.3),
-                     child:  ElevatedButton(
-                       onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen7()));},
-                       child:  Text("PAYMENT GATEWAYS",
-                         style: TextStyle(fontSize: textScaleHere*buttonDivisionFactor, color: Colors.white,),),
+                 Container(
+                   height: (MediaQuery.of(context).size.height/thisHeight),
+                   width: (MediaQuery.of(context).size.width/1.4),
+                   decoration: const BoxDecoration(
+                     borderRadius: BorderRadius.all(Radius.elliptical(270,60)),
+                     boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 30),],
+                     color: Colors.white,
+                   ),
+                   child:ClipOval(
+                     child: Material(
+                       color: Colors.transparent,
+                       child: InkWell(
+                         onTap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen7()));},
+                         splashColor: Colors.blueAccent,
+                         child: Row(
+                           children: [
+                             SizedBox(width: (MediaQuery.of(context).size.width/30),),
+                             const Icon(Icons.paid_outlined,size: 35,color: Colors.black,),
+                             Text('    PAYMENT GATEWAYS', style: TextStyle(fontWeight: FontWeight.w600,fontSize: textScaleHere*buttonDivisionFactor, color: Colors.black,),),
+                             //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
+                             //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
+                           ],
+                         ),
+                       ),
                      ),
                    ),
                  ),
@@ -156,12 +175,16 @@ class _Screen4State extends State<Screen4> {
                    //height: (MediaQuery.of(context).size.height/3.3),
                    width: (MediaQuery.of(context).size.width/30),
                  ),
-                 ClipOval(
-                   child: Container(
-                     height: (MediaQuery.of(context).size.height/28),
-                     width: (MediaQuery.of(context).size.width/12),
-                     color: Colors.blue,
-                   ),
+                 Checkbox(
+                   value: checkVal,
+                   checkColor: Colors.deepOrange,
+                   onChanged: (bool? value) {
+                     if (checkVal == false) {}
+                     setState((){
+                       checkVal = value!;
+                       if (checkVal == true){}
+                     });
+                   },
                  ),
                ],
              ),
