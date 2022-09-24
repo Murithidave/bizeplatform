@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import '../Screen_12-BusinessDetails/UI_Screen_12.dart';
 import '../Screen_13-Businessdocuments/UI_Screen_13.dart';
 import '../Screen_15-PaymentGateways/UI_Screen_15.dart';
+import '../Screen_16-MerchantPrefernces/UI_Screen_16.dart';
+import '../Screen_21-BuyerViewInfiteScroll/UI_Screen21.dart';
 import '../Screen_3-BuyerSettingPage/UI_Screen_3.dart';
 
 class Screen2 extends StatelessWidget {
@@ -23,8 +25,9 @@ class Screen2 extends StatelessWidget {
         '/Screen13': (context) => const Screen13(),
        // '/Screen14': (context) => const Screen14(),
         '/Screen15': (context) => const Screen15(),
-        //'/Screen16': (context) => const Screen16(),
+        '/Screen16': (context) => const Screen16(),
         '/Screen17': (context) => const Screen17(),
+        '/Screen21': (context) => Screen21(),
 
       },
       home: Builder(builder: (context) {
@@ -99,7 +102,10 @@ class Screen2 extends StatelessWidget {
                 height: 100,
                 width: double.infinity,
                 padding: EdgeInsets.all(20.0),
-                child: ElevatedButton(onPressed: () {}, child: Text("SEARCH")),
+                child: ElevatedButton(onPressed: () {
+                  Navigator.pushNamed(context, '/Screen21');
+
+                }, child: Text("SEARCH")),
               ),
               const SizedBox(width: double.infinity, height: 100),
               Container(
