@@ -1,5 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api
 
+import 'package:bizeplatform/Screen_4-BuyermenuSettings/ui_screen_4.dart';
 import 'package:flutter/material.dart';
 
 class Screen5 extends StatefulWidget {
@@ -63,6 +64,7 @@ class _Screen5State extends State<Screen5> {
                 child: Padding(
                     padding: const EdgeInsets.all(5),
                     child:Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
                           height: (MediaQuery.of(context).size.height/12),
@@ -82,7 +84,6 @@ class _Screen5State extends State<Screen5> {
                             ),
                           ),
                         ),
-                        //SizedBox(height: (MediaQuery.of(context).size.height/30), width: double.infinity,),
                         SizedBox(
                           height: (MediaQuery.of(context).size.height/12),
                           width: (MediaQuery.of(context).size.width/1.3),
@@ -99,7 +100,6 @@ class _Screen5State extends State<Screen5> {
                             ),
                           ),
                         ),
-                        //SizedBox(height: (MediaQuery.of(context).size.height/30), width: double.infinity,),
                         SizedBox(
                           height: (MediaQuery.of(context).size.height/12),
                           width: (MediaQuery.of(context).size.width/1.3),
@@ -116,7 +116,6 @@ class _Screen5State extends State<Screen5> {
                             ),
                           ),
                         ),
-                        //SizedBox(height: (MediaQuery.of(context).size.height/30), width: double.infinity,),
                         SizedBox(
                           height: (MediaQuery.of(context).size.height/12),
                           width: (MediaQuery.of(context).size.width/1.3),
@@ -133,7 +132,6 @@ class _Screen5State extends State<Screen5> {
                             ),
                           ),
                         ),
-                        //SizedBox(height: (MediaQuery.of(context).size.height/30), width: double.infinity,),
                         SizedBox(
                           height: (MediaQuery.of(context).size.height/12),
                           width: (MediaQuery.of(context).size.width/1.3),
@@ -150,18 +148,15 @@ class _Screen5State extends State<Screen5> {
                             ),
                           ),
                         ),
-                        //SizedBox(height: (MediaQuery.of(context).size.height/30), width: double.infinity,),
-                        Container(
+                        SizedBox(
                           height: (MediaQuery.of(context).size.height/18),
-                          width: (MediaQuery.of(context).size.width/1.3),
-                          decoration: const BoxDecoration(
-                              //border: Border.all(color: Colors.blue,width: 1,),
-                              boxShadow:[BoxShadow(color: Colors.blue, offset:Offset(1.5, 1.5),blurRadius: 25),],
-                              color: Colors.blue,
-                          ),
+                          width: (MediaQuery.of(context).size.width/1.4),
                           child: ElevatedButton(
-                            onPressed: (){},
-                            child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen5*26, color: Colors.white,),),
+                            style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),),
+                            onPressed: (){
+                              Navigator.pop(context);
+                            },
+                            child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen5*buttonDivisionFactor, color: Colors.white,),),
                           ),
                         ),
                       ],

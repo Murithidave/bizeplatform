@@ -15,6 +15,8 @@ class _Screen7State extends State<Screen7> {
   @override
   Widget build(BuildContext context) {
     double textScaleScreen5 = MediaQuery.textScaleFactorOf(context);
+    double thisBlur = 10;
+    double buttonDivisionFactor = 20;
     return Scaffold(
       // backgroundColor: Color(0xffffffff),
       backgroundColor: Colors.white,
@@ -416,17 +418,13 @@ class _Screen7State extends State<Screen7> {
                 indent: 0,
                 endIndent: 0,
               ),
-              Container(
+              SizedBox(
                 height: (MediaQuery.of(context).size.height/18),
-                width: (MediaQuery.of(context).size.width/1.3),
-                decoration: const BoxDecoration(
-                  //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
-                  boxShadow:[BoxShadow(color: Colors.blue, offset:Offset(1.5, 1.5),blurRadius: 20),],
-                  color: Colors.blue,
-                ),
+                width: (MediaQuery.of(context).size.width/1.4),
                 child: ElevatedButton(
-                  onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context) => const Screen8()));},
-                  child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen5*26, color: Colors.white,),),
+                  style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),),),
+                  onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const Screen8()));},
+                  child: Text('SUBMIT',style: TextStyle(fontSize: textScaleScreen5*buttonDivisionFactor, color: Colors.white,),),
                 ),
               ),
             ],

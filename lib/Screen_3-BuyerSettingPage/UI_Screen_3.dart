@@ -17,14 +17,16 @@ class Screen3 extends StatefulWidget {
 class _Screen3State extends State<Screen3> {
   @override
   Widget build(BuildContext context) {
-    double textScaleScreen5 = MediaQuery.textScaleFactorOf(context);
+    double textScaleScreen5 = MediaQuery.of(context).textScaleFactor;
     //double buttonDivisionFactor = 20;
-    num screen5FontFactor = 23;
+    num screen5FontFactor = 13;
    num thisSpacing = 40;
    num thisHeight = 10;
+   double thisBlur = 10;
+   double thisWidth =1.05 ;
    return Scaffold(
      appBar: AppBar(
-       title: Text("BUYER MODE",style: TextStyle(fontSize: textScaleScreen5*screen5FontFactor , color: Colors.white,fontWeight: FontWeight.w700),),
+       title: Text("BUYER MODE",style: TextStyle( color: Colors.white,fontWeight: FontWeight.w700),),
      ),
        body:SizedBox(
          height: double.infinity,
@@ -43,10 +45,10 @@ class _Screen3State extends State<Screen3> {
                    SizedBox(height: (MediaQuery.of(context).size.height/20),),
                    Container(
                      height: (MediaQuery.of(context).size.height/thisHeight),
-                     width: (MediaQuery.of(context).size.width/1.1),
-                     decoration: const BoxDecoration(
+                     width: (MediaQuery.of(context).size.width/thisWidth),
+                     decoration:  BoxDecoration(
                        //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
-                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 14),],
+                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: thisBlur,),],
                        color: Colors.white,
                      ),
                      child:Material(
@@ -58,7 +60,7 @@ class _Screen3State extends State<Screen3> {
                            children: [
                              SizedBox(width: (MediaQuery.of(context).size.width/30),),
                              const Icon(Icons.settings_suggest_outlined,size: 35,color: Colors.black,),
-                             Text('    Buyer Settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, fontSize: textScaleScreen5*screen5FontFactor , color: Colors.black, ),),
+                             Text('    Buyer Settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black, ),),
                              //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
                              //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
                            ],
@@ -69,10 +71,10 @@ class _Screen3State extends State<Screen3> {
                    SizedBox(height: (MediaQuery.of(context).size.height/thisSpacing),),
                    Container(
                      height: (MediaQuery.of(context).size.height/thisHeight),
-                     width: (MediaQuery.of(context).size.width/1.1),
-                     decoration: const BoxDecoration(
+                     width: (MediaQuery.of(context).size.width/thisWidth),
+                     decoration: BoxDecoration(
                        //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
-                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 14),],
+                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: thisBlur),],
                        color: Colors.white,
                      ),
                      child:Material(
@@ -84,7 +86,7 @@ class _Screen3State extends State<Screen3> {
                            children: [
                              SizedBox(width: (MediaQuery.of(context).size.width/30),),
                              const Icon(Icons.flip_outlined,size: 35,color: Colors.black,),
-                             Text('    Switch to merchant mode', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, fontSize: textScaleScreen5*screen5FontFactor , color: Colors.black, ),),
+                             Text('    Switch to merchant mode', textAlign: TextAlign.left, style: TextStyle( fontWeight: FontWeight.w600, color: Colors.black, ),),
                              //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
                              //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
                            ],
@@ -95,7 +97,7 @@ class _Screen3State extends State<Screen3> {
                    SizedBox(height: (MediaQuery.of(context).size.height/thisSpacing),),
                    Container(
                      height: (MediaQuery.of(context).size.height/thisHeight),
-                     width: (MediaQuery.of(context).size.width/1.1),
+                     width: (MediaQuery.of(context).size.width/thisWidth),
                      decoration: const BoxDecoration(
                        //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
                        boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 14),],
@@ -112,7 +114,7 @@ class _Screen3State extends State<Screen3> {
                            children: [
                              SizedBox(width: (MediaQuery.of(context).size.width/30),),
                              const Icon(Icons.business_center_outlined,size: 35,color: Colors.black,),
-                             Text('    Merchant settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, fontSize: textScaleScreen5*screen5FontFactor , color: Colors.black, ),),
+                             Text('    Merchant settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black, ),),
                              //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
                              //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
                            ],
@@ -123,10 +125,10 @@ class _Screen3State extends State<Screen3> {
                    SizedBox(height: (MediaQuery.of(context).size.height/thisSpacing),),
                    Container(
                      height: (MediaQuery.of(context).size.height/thisHeight),
-                     width: (MediaQuery.of(context).size.width/1.1),
-                     decoration: const BoxDecoration(
+                     width: (MediaQuery.of(context).size.width/thisWidth),
+                     decoration: BoxDecoration(
                        //border: Border.all(color: Colors.lightBlueAccent,width: 1,),
-                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: 14),],
+                       boxShadow:[BoxShadow(color: Colors.blueAccent, offset:Offset(1.5, 1.5),blurRadius: thisBlur),],
                        color: Colors.white,
                      ),
                      child:Material(
@@ -140,7 +142,7 @@ class _Screen3State extends State<Screen3> {
                            children: [
                              SizedBox(width: (MediaQuery.of(context).size.width/30),),
                              const Icon(Icons.app_settings_alt_outlined,size: 35,color: Colors.black,),
-                             Text('    App Settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, fontSize: textScaleScreen5*screen5FontFactor , color: Colors.black, ),),
+                             Text('    App Settings', textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black, ),),
                              //SizedBox(width: (MediaQuery.of(context).size.width/2.3),),
                              //const Icon(Icons.arrow_forward_ios_rounded,size: 28,)
                            ],
