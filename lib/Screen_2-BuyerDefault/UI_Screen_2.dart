@@ -10,6 +10,7 @@ import '../Screen_15-PaymentGateways/UI_Screen_15.dart';
 import '../Screen_16-MerchantPrefernces/UI_Screen_16.dart';
 import '../Screen_21-BuyerViewInfiteScroll/UI_Screen21.dart';
 import '../Screen_3-BuyerSettingPage/UI_Screen_3.dart';
+import '../simple_camera_widget/qr_screen.dart';
 
 class Screen2 extends StatelessWidget {
   const Screen2({super.key});
@@ -128,7 +129,7 @@ class Screen2 extends StatelessWidget {
                 padding: EdgeInsets.all(20.0),
                 child: ElevatedButton(
                     onPressed: () {
-                      //Navigator.push(context, MaterialPageRoute(builder: (context) => const Screen3()),);
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => qrScreenTrial1()));
                     },
                     child: const Text("SCAN MERCHANT QR CODE")),
               ),
